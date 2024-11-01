@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aframe/1.4.2/aframe.min.js"></script>
+    <style>
+      body { margin: 0; }
+    </style>
+  </head>
+  <body>
+    <a-scene>
+      <!-- Environment -->
+      <a-sky color="#ECECEC"></a-sky>
+      <a-plane position="0 0 0" rotation="-90 0 0" width="50" height="50" color="#7BC8A4"></a-plane>
+
+      <!-- Centered PNG plane -->
+      <a-entity position="0 1.6 -2">
+        <a-plane 
+          width="1.6" 
+          height="2"
+          material="shader: flat; src: https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Snellen_chart.svg/481px-Snellen_chart.svg.png; crossorigin: anonymous"
+          position="0 0 0">
+        </a-plane>
+      </a-entity>
+
+      <!-- Default camera with position -->
+      <a-entity position="0 1.6 0">
+        <a-camera></a-camera>
+      </a-entity>
+    </a-scene>
+  </body>
+</html>
